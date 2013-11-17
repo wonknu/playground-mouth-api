@@ -18,8 +18,8 @@ var pgconnect = pgconnect || {};
  */
 pgconnect.route = {
 	//server : 'http://192.168.1.34:88/', // local home
-    //server : 'http://192.168.1.108:88/' // local work
-    server : 'http://ic.adfab.fr:88/' // server IC
+    server : 'http://192.168.1.108:88/' // local work
+    //server : 'http://ic.adfab.fr:88/' // server IC
 };
 
 /**
@@ -131,7 +131,7 @@ jQuery.noConflict();
 			 * tell node.js to connect and wait -> scroll up : socket.on('connect'....
 			 */
 		    socket.emit('logged', { room : pgconnect.api_key, user : pgconnect.user }); 
-		}
+		};
 		// check if ears script is with me
 		if(PG.Config.modules.ears && PG.Util.not_null(PG.Settings.apiKey)) {
 			pgconnect.init(PG.Util.readCookie("login"));
